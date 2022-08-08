@@ -1,0 +1,260 @@
+:root{
+  --primary-color:rgb(255, 92, 92);
+  --secondary-color:rgb(241, 229, 122);
+  --third-color:rgb(124, 145, 236);
+}
+
+*, ::before, ::after{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body{
+  height:100vh;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 2rem;
+}
+
+a{
+  text-decoration: none;    
+  color:rgb(0, 0, 0);
+}
+
+
+/* NAVIGATION BAR START */
+#navbar{
+ width:100%;
+ position:fixed;
+ display:flex;
+ z-index: 1;
+ background-color:var(--secondary-color);
+ border-bottom: 2px solid rgba(0, 0, 0, 0.349);
+
+ justify-content:flex-end; 
+}
+
+.nav-link{
+ padding:25px 20px;
+ transition: background-color 1s;
+ font-size:min(2rem,4vw);/*clamp()*/
+}
+
+.nav-link:hover{
+  background-color: var(--third-color);
+}
+/* NAVIGATION BAR END */
+
+
+/* WELCOM SECTION START */
+#welcome-section{
+  height:100vh;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(62deg, #b4d9ff 0%, #c994ff 100%);
+}
+
+#welcome-section>*{
+  padding:1rem;
+}
+/* WELCOM SECTION START */
+
+
+/* PROJECTS SECTION START */
+#projects{
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+
+  padding-top:3.5rem;
+  padding-bottom:3.5rem;
+  background-color: var(--secondary-color);
+  min-height:fit-content;
+}
+
+#projects>*{
+  margin:1.5rem;
+}
+
+#projects hr{
+  border:1px solid black;
+  width:400px;
+}
+
+#projects-wrapper{
+  display:grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(3,1fr);
+  gap:2rem;
+}
+
+.project-tile{
+  border:1px solid rgba(0, 0, 0, 0.76);
+  min-height:400px;
+  max-height: 100%;
+  width:350px;
+  box-sizing: content-box;
+}
+
+.project-link{
+  display: block;
+  width: 100%;
+  height:100%;
+}
+
+.project-img{
+  width:100%;
+  height:80%;
+  object-fit: cover;
+}
+
+.project-tile p{
+  height:20%;
+  background-color: #b4d9ff;
+  position: relative;
+  bottom:8px;
+
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content:center;
+  padding:15px;
+} 
+
+.project-name{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+
+.project-tile .project-name:before{
+  content:"< ";
+  opacity:0;
+  transition:opacity 1s;
+}
+
+.project-tile:hover .project-name:before{
+  opacity:1;
+}
+
+.project-tile .project-name:after{
+  content:"/>";
+  transition:opacity 1s;
+  opacity:0;
+}
+
+.project-tile:hover .project-name:after{
+  opacity:1;
+}
+
+#profile-link{
+  background-color: #b4d9ff;
+  border:1px solid;
+  border-radius: 6px;
+  padding:20px;
+}
+
+#arrow{
+  display: inline-block;
+  transition: transform 1s;
+  font-weight: bold;
+}
+
+#profile-link:hover #arrow{
+  transform: translateX(10px);
+}
+/* WELCOM SECTION END */
+
+
+/* CONTACT SECTION START */
+#contact{
+  display:flex;
+  flex-direction:column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+  border-bottom:3px solid red;
+
+  min-height: 80vh;
+  width:100%;
+  height:750px;
+}
+
+#contact>*{
+  padding:1rem;
+}
+
+#contact p{
+  font-style: italic;
+}
+
+#contact a{
+  display:inline-block;
+  padding:1rem;
+  transition:transform 1s;
+}
+
+#contact a:hover{
+  transform: translateY(-10px);
+}
+
+#contact i{
+  font-size:3rem;
+  font-size: 3rem;
+} 
+
+/* CONTACT SECTION END */
+
+
+/* FOOTER START */
+footer{
+  width:100%;
+  height:100px;
+  background-color:var(--secondary-color);
+  text-align:end;
+}
+
+footer p{
+  padding:30px 20px;
+}
+/* FOOTER END */
+
+
+/* MEDIA SECTION START */
+@media screen and (max-width:1200px){
+
+  #projects-wrapper{
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+  }
+}
+
+
+@media screen and (max-width:900px){
+  /* grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); use this to avoid media queries */
+  #projects-wrapper{
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(3,1fr);
+  }
+
+  #navbar{
+    justify-content: center;
+  }
+}
+
+
+@media screen and (max-width:800px){
+
+  .nav-link{
+    padding:15px 10px;
+  }
+}
+/* MEDIA SECTION END */

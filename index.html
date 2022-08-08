@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>My portfolio</title>
+    <meta charset="UTF-8"/>
+    <meta name="vieqport" content="widh=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet" href="styles.css"></link>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400&display=swap" rel="stylesheet">
+    <!-- <script src="https://kit.fontawesome.com/d35612a376.js" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"/>
+    <script src="main.js" defer></script>
+  </head>
+  
+  <body>
+
+    <!-- START NAV -->
+    <header>
+      <!-- It's better to use <ul><li> for navbar -->
+      <nav id="navbar"> 
+        <a href="#welcome-section" class="nav-link">About</a>
+        <a href="#projects" class="nav-link">My projects</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+    </header>
+    <!-- END NAV -->
+
+    <main>
+      <!-- START WELCOME SECTION -->
+      <section id="welcome-section">
+        <h1>Hi, it's Dunash here</h1>
+        <p>I like coding</p>
+      </section>
+      <!-- END WELCOME SECTION -->
+
+
+      <!-- START PROJECTS SECTION -->
+      <section id="projects">
+        <h1>Some of my projects</h1>
+        <hr/>
+        <div id="projects-wrapper">
+
+          <article class="project-tile">
+            <a href="https://github.com/Dunash/freeCodeCamp/tree/main/freeCodeCamp/LandingPage" class="profile-link">
+              <img 
+                src="proj-1.png" 
+                alt="project-1" 
+                class="project-img"/>
+              <p><span class="project-name">Tribute page</span></p>
+            </a>
+          </article>
+
+          <article class="project-tile">
+            <a href="" class="profile-link">
+              <img 
+                src="proj-2.png" 
+                alt="project-2" 
+                class="project-img"/>
+              <p><span class="project-name">Documentation Page</span></p>
+            </a>
+          </article>
+
+          <article class="project-tile">
+            <a href="" class="profile-link">
+              <img 
+                src="proj-3.png" 
+                alt="project-3" 
+                class="project-img"/>
+              <p><span class="project-name">Current project</span></p>
+            </a>
+          </article>
+
+        </div>
+
+          <a 
+            href="" 
+            id="profile-link" 
+            target="_blank" 
+            referrerpolicy="no-referrer">
+            Show all <span id="arrow">></span>
+          </a>
+
+      </section>
+      <!-- END PROJECTS SECTION -->
+
+
+      <!-- START CONTACT SECTION -->
+      <section id="contact">
+        <h1>Contact me here</h1>
+        <p>or find me at the bar...</p>
+        <div class="contact-links">
+          <a href="https//www.facebook.com">
+            <i class="fab fa-facebook"></i>
+            <span class="contact-link">Face face</span>
+          </a>
+          <a href="github.com">
+            <i class="fab fa-github"></i>
+            <span class="contact-link">Gip gip</span>
+          </a>  
+          <a href="twitter.com">
+            <i class="fab fa-twitter"></i>
+            <span class="contact-link">Tweet tweet</span>
+          </a>       
+        </div>
+      </section>
+      <!-- END CONTACT SECTION -->
+
+      
+    </main>
+
+    <!-- START FOOTER SECTION -->
+    <footer>
+      <p>Coffee cups spend on this webpage:<b>20</b></p>
+    </footer>
+    <!-- END FOOTER SECTION -->
+
+  </body>
+</html>
