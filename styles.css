@@ -1,7 +1,7 @@
 :root{
-  --primary-color:rgb(255, 92, 92);
-  --secondary-color:rgb(241, 229, 122);
-  --third-color:rgb(124, 145, 236);
+  --primary-color:#73DFA1;
+  --secondary-color:#FFFF8B;
+  --third-color:#E4BCFE;
 }
 
 *, ::before, ::after{
@@ -41,7 +41,7 @@ a{
 
 .nav-link{
  padding:25px 20px;
- transition: background-color 1s;
+ transition: background-color 0.5s;
  font-size:min(2rem,4vw);/*clamp()*/
 }
 
@@ -58,7 +58,7 @@ a{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(62deg, #b4d9ff 0%, #c994ff 100%);
+  background: linear-gradient(62deg, var(--primary-color) 0%, var(--third-color) 100%);
 }
 
 #welcome-section>*{
@@ -118,7 +118,7 @@ a{
 
 .project-tile p{
   height:20%;
-  background-color: #b4d9ff;
+  background-color: var(--third-color);
   position: relative;
   bottom:8px;
 
@@ -156,7 +156,7 @@ a{
 }
 
 #profile-link{
-  background-color: #b4d9ff;
+  background-color: var(--third-color);
   border:1px solid;
   border-radius: 6px;
   padding:20px;
