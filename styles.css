@@ -45,9 +45,12 @@ a{
  font-size:min(2rem,4vw);/*clamp()*/
 }
 
-.nav-link:hover{
-  background-color: var(--third-color);
+@media (hover: hover){
+  .nav-link:hover{
+    background-color: var(--third-color);
+  }
 }
+
 /* NAVIGATION BAR END */
 
 
@@ -141,9 +144,12 @@ a{
   transition:opacity 1s;
 }
 
-.project-tile:hover .project-name:before{
-  opacity:1;
+@media (hover: hover){
+  .project-tile:hover .project-name:before{
+    opacity:1;
+  }
 }
+
 
 .project-tile .project-name:after{
   content:"/>";
@@ -151,8 +157,10 @@ a{
   opacity:0;
 }
 
-.project-tile:hover .project-name:after{
-  opacity:1;
+@media (hover: hover){
+  .project-tile:hover .project-name:after{
+    opacity:1;
+  }
 }
 
 #profile-link{
@@ -168,9 +176,12 @@ a{
   font-weight: bold;
 }
 
-#profile-link:hover #arrow{
-  transform: translateX(10px);
+@media (hover: hover){
+  #profile-link:hover #arrow{
+    transform: translateX(10px);
+  }
 }
+
 /* WELCOM SECTION END */
 
 
@@ -202,9 +213,12 @@ a{
   transition:transform 1s;
 }
 
-#contact a:hover{
-  transform: translateY(-10px);
+@media (hover: hover){
+  #contact a:hover{
+    transform: translateY(-10px);
+  }
 }
+
 
 #contact i{
   font-size:3rem;
@@ -229,6 +243,7 @@ footer p{
 
 
 /* MEDIA SECTION START */
+
 @media screen and (max-width:1200px){
 
   #projects-wrapper{
