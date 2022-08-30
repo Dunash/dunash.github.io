@@ -19,6 +19,7 @@ body{
   height:100vh;
   font-family: 'Roboto Mono', monospace;
   font-size: 2rem;
+  text-align: center;
 }
 
 a{
@@ -62,6 +63,7 @@ a{
   justify-content: center;
   align-items: center;
   background: linear-gradient(62deg, var(--primary-color) 0%, var(--third-color) 100%);
+
 }
 
 #welcome-section>*{
@@ -81,6 +83,7 @@ a{
   padding-bottom:3.5rem;
   background-color: var(--secondary-color);
   min-height:fit-content;
+  scroll-margin: 5rem;
 }
 
 #projects>*{
@@ -90,12 +93,15 @@ a{
 #projects hr{
   border:1px solid black;
   width:400px;
+  max-width:80%;
 }
 
 #projects-wrapper{
+  /* border:solid; */
+  width:90%;
   display:grid;
-  grid-auto-flow: column;
-  grid-template-columns: repeat(3,1fr);
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit,min(350px,100%));
   gap:2rem;
 }
 
@@ -103,8 +109,7 @@ a{
   border:1px solid rgba(0, 0, 0, 0.76);
   min-height:400px;
   max-height: 100%;
-  width:350px;
-  box-sizing: content-box;
+  box-sizing: content-box; 
 }
 
 .project-link{
@@ -114,7 +119,7 @@ a{
 }
 
 .project-img{
-  width:100%;
+  width: 100%;
   height:80%;
   object-fit: cover;
 }
@@ -231,7 +236,7 @@ a{
 /* FOOTER START */
 footer{
   width:100%;
-  height:100px;
+  height:fit-content;
   background-color:var(--secondary-color);
   text-align:end;
 }
@@ -244,22 +249,7 @@ footer p{
 
 /* MEDIA SECTION START */
 
-@media screen and (max-width:1200px){
-
-  #projects-wrapper{
-    grid-template-columns: repeat(2,1fr);
-    grid-template-rows: repeat(2,1fr);
-  }
-}
-
-
 @media screen and (max-width:900px){
-  /* grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); use this to avoid media queries */
-  #projects-wrapper{
-    grid-template-columns: repeat(1,1fr);
-    grid-template-rows: repeat(3,1fr);
-  }
-
   #navbar{
     justify-content: center;
   }
@@ -271,5 +261,13 @@ footer p{
   .nav-link{
     padding:15px 10px;
   }
+
+}
+
+/* @media screen and (max-width:400px) {
+ *{
+    font-size: 0.8rem;
+} */
+
 }
 /* MEDIA SECTION END */
